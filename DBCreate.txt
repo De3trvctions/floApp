@@ -1,0 +1,1 @@
+docker run -d --name mysql-flo-db --restart always -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=flo -e MYSQL_USER=Admin -e MYSQL_PASSWORD=123456 -v db_data:/var/lib/mysql --network app_network mysql:8.0 --default-authentication-plugin=mysql_native_password --max_allowed_packet=256M --max_connections=128 --binlog-expire-logs-seconds=86400
